@@ -29,7 +29,7 @@ asincrono funcion mostrarProximoFeriado() {
   const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
-  Terminal.limpiar
+  Terminal.limpiar()
   Terminal.escribir("")
   Terminal.escribir("GRACIAS POR SU VISITA!!!");
   Terminal.escribir("")
