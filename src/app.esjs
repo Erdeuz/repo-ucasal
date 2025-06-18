@@ -31,7 +31,7 @@ asincrono funcion mostrarProximoFeriado() {
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
   Terminal.escribir("")
-  Terminal.escribir(`${tiza.indigo800.fondoIndigo50("COMO INTERNET ES SERVICIO :)")}`)
+  Terminal.escribir(`${tiza.indigo800.fondoIndigo50.negrita("COMO INTERNET ES SERVICIO :)")}`)
   Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("")
