@@ -18,7 +18,7 @@ asincrono funcion inicio() {
     Terminal.escribir("Palabra secreta inválida")
   }
 
-  Terminal.escribir("Presiona ENTER para volver a ingresar")
+  Terminal.escribir("          Presiona ENTER para volver a ingresar")
 
   esperar Terminal.leerEnter()
 
