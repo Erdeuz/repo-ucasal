@@ -44,6 +44,7 @@ asincrono funcion mostrarProximoFeriado() {
   const letra = frase[i]
   const color = colores[i % colores.length]
   resultado += color.negrita(letra)
+  }
   Terminal.escribir("")
   Terminal.escribir(resultado)
   Terminal.escribir("")
