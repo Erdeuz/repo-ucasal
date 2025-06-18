@@ -24,14 +24,28 @@ asincrono funcion inicio() {
 
   inicio()
 }
-
+const frase = "COMO INTERNET ES SERVICIO :)";
+const colores = [
+  tiza.rojo500,
+  tiza.verde500,
+  tiza.azul500,
+  tiza.amarillo500,
+  tiza.cyan500,
+  tiza.rosa500,
+  tiza.indigo500,
+  tiza.lima500
+];
 asincrono funcion mostrarProximoFeriado() {
   const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
+  for (let i = 0; i < frase.length; i++) {
+  const letra = frase[i]
+  const color = colores[i % colores.length]
+  resultado += color.negrita(letra)
   Terminal.escribir("")
-  Terminal.escribir(`${tiza.indigo800.fondoIndigo50.negrita("COMO INTERNET ES SERVICIO :)")}`)
+  Terminal.escribir(resultado)
   Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("")
