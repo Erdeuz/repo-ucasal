@@ -39,7 +39,7 @@ asincrono funcion mostrarProximoFeriado() {
   const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
-  Terminal.limpiar
+  Terminal.limpiar()
   let resultado = ""
   for (let i = 0; i < frase.length; i++) {
   const letra = frase[i]
