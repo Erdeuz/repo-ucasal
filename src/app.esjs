@@ -5,7 +5,7 @@ importar { validarSecreto } desde "https://desarrollo-aplicaciones.vercel.app/20
 importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js"
 importar { tiza } desde "@es-js/tiza"
 asincrono funcion inicio() {
-  Terminal.escribit("")
+  Terminal.escribir("")
   Terminal.escribir(tiza.fondoAzul.cursiva.negrita("Por favor, ingrese la Palabra secreta :) "))
 
   var secreto = esperar Terminal.leer()
