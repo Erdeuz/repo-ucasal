@@ -3,6 +3,7 @@ importar { Terminal } desde "@es-js/terminal"
 importar { obtenerJson } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js"
 importar { validarSecreto } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/validar-secreto.js"
 importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js"
+importar { Terminal } desde "@es-js/terminal"
 asincrono funcion inicio() {
   Terminal.escribir("Hola! Ingresa la palabra secreta:")
 
@@ -31,7 +32,7 @@ asincrono funcion mostrarProximoFeriado() {
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar()
   Terminal.escribir("")
-  Terminal.escribir("GRACIAS POR SU VISITA!!!");
+  Terminal.escribir(tiza.cursiva.negrita("B I E N V E N I D O S   A   L A   P A G I N A!!!!!"))
   Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
