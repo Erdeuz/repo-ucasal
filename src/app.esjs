@@ -1,35 +1,27 @@
-importar { Terminal } desde "@es-js/terminal"
-importar { obtenerJson } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js"
-importar { validarSecreto } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/validar-secreto.js"
-importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js"
-importar { tiza } desde "@es-js/tiza"
-asincrono funcion inicio() {
-  Terminal.escribir("Hola! Ingresa la palabra secreta:")
+import { Terminal } from "@es-js/terminal";
+import { obtenerJson } from "https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js";
+import { validarSecreto } from "https://desarrollo-aplicaciones.vercel.app/2024/code/validar-secreto.js";
+import { calcularProximoFeriado } from "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js";
+import { tiza } from "@es-js/tiza";
 
-  var secreto = esperar Terminal.leer()
+async function inicio() {
+  Terminal.escribir("Hola! Ingresa la palabra secreta:");
 
-  var dni = "33145119" // Ingresa tu DNI aquí 👈
+  const secreto = await Terminal.leer();
+  const dni = "33145119"; // Ingresa tu DNI aquí 👈
 
-  si (esperar validarSecreto(dni, secreto)) {
-    esperar mostrarProximoFeriado()
-  } sino {
-    Terminal.escribir("Palabra secreta inválida")
+  if (await validarSecreto(dni, secreto)) {
+    await mostrarProximoFeriado();
+  } else {
+    Terminal.escribir("Palabra secreta inválida");
   }
 
-  Terminal.escribir("Presiona ENTER para volver a ingresar")
-
-  esperar Terminal.leerEnter()
-
-  Terminal.limpiar()
-
-  inicio()
+  Terminal.escribir("Presiona ENTER para volver a ingresar");
+  await Terminal.leerEnter();
+  Terminal.limpiar();
+  inicio();
 }
 
-asincrono funcion mostrarProximoFeriado() {
-  const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
-  const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
-  const proximoFeriado = calcularProximoFeriado(feriados)
-  Terminal.limpiar()
 const frase = "COMO INTERNET ES SERVICIO :)";
 const colores = [
   tiza.rojo500,
@@ -41,29 +33,31 @@ const colores = [
   tiza.indigo500,
   tiza.lima500
 ];
-  let resultado = ""
-  for (let i = 0; i < frase.length; i++) {
-    const letra = frase[i]
-  const color = colores[i % colores.length]
-  resultado += color.negrita(letra)
-  }
-  Terminal.escribir("")
-  Terminal.escribir(resultado)
-  Terminal.escribir("")
-  Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
-  Terminal.escribir("")
-  Terminal.escribir("Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
-  Terminal.escribir("")
-  Terminal.escribir("")
-  Terminal.escribir("")
-  Terminal.escribir("")
-  Terminal.escribir("Por ultimo, ya que estamos, brindamos la cotizacion del dolar:  ")
-  Terminal.escribir("El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
-  Terminal.escribir("El precio del dolar blue, para la VENTA de:  " + dolarBlue.venta)
-  Terminal.escribir("")
-  Terminal.escribir("")
-  
 
+async function mostrarProximoFeriado() {
+  const feriados = await obtenerJson('https://api.argentinadatos.com/v1/feriados/');
+  const dolarBlue = await obtenerJson('https://dolarapi.com/v1/dolares/blue');
+  const proximoFeriado = calcularProximoFeriado(feriados);
+
+  Terminal.limpiar();
+
+  let resultado = "";
+  for (let i = 0; i < frase.length; i++) {
+    const letra = frase[i];
+    const color = colores[i % colores.length];
+    resultado += color.negrita(letra);
+  }
+
+  Terminal.escribir("");
+  Terminal.escribir(resultado);
+  Terminal.escribir("");
+  Terminal.escribir("La fecha del próximo feriado es: " + proximoFeriado.fecha);
+  Terminal.escribir("Motivo del feriado: " + proximoFeriado.nombre);
+  Terminal.escribir("");
+  Terminal.escribir("Cotización del dólar blue:");
+  Terminal.escribir("Compra: " + dolarBlue.compra);
+  Terminal.escribir("Venta: " + dolarBlue.venta);
+  Terminal.escribir("");
 }
 
-inicio()
+inicio();
