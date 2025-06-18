@@ -40,6 +40,7 @@ asincrono funcion mostrarProximoFeriado() {
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
+  let resultado = ""
   for (let i = 0; i < frase.length; i++) {
   const letra = frase[i]
   const color = colores[i % colores.length]
