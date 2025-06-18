@@ -30,9 +30,12 @@ asincrono funcion mostrarProximoFeriado() {
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
-
+  Terminal.escribir("")
+  Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
+  Terminal.escribir("")
   Terminal.escribir("Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
+  Terminal.escribir("")
   Terminal.escribir("")
   Terminal.escribir("")
   Terminal.escribir("")
