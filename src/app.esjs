@@ -2,7 +2,7 @@ importar { Terminal } desde "@es-js/terminal"
 importar { obtenerJson } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js"
 importar { validarSecreto } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/validar-secreto.js"
 importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js"
-
+importar { tiza } desde "@es-js/tiza"
 asincrono funcion inicio() {
   Terminal.escribir("Hola! Ingresa la palabra secreta:")
 
@@ -31,7 +31,7 @@ asincrono funcion mostrarProximoFeriado() {
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
   Terminal.escribir("")
-  Terminal.escribir("")
+  Terminal.escribir(`${tiza.indigo800.fondoIndigo50("COMO INTERNET ES SERVICIO :)")}`)
   Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("")
@@ -41,7 +41,7 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("")
   Terminal.escribir("")
   Terminal.escribir("")
-  Terminal.escribir("Por ultimo, como internet es servicio, la cotizacion del dolar es la siguiente: ");
+  Terminal.escribir("Por ultimo, ya que estamos, brindamos la cotizacion del dolar:  ")
   Terminal.escribir("El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
   Terminal.escribir("El precio del dolar blue, para la VENTA de:  " + dolarBlue.venta)
   Terminal.escribir("")
