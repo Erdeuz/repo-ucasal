@@ -35,11 +35,11 @@ const colores = [
 ];
 
 async function mostrarProximoFeriado() {
-  const feriados = await obtenerJson('https://api.argentinadatos.com/v1/feriados/');
-  const dolarBlue = await obtenerJson('https://dolarapi.com/v1/dolares/blue');
+  const feriados = await obtenerJson("https://api.argentinadatos.com/v1/feriados/");
+  const dolarBlue = await obtenerJson("https://dolarapi.com/v1/dolares/blue");
   const proximoFeriado = calcularProximoFeriado(feriados);
 
-  Terminal.limpiar();
+  Terminal.limpiar(); // Le faltaban los paréntesis
 
   let resultado = "";
   for (let i = 0; i < frase.length; i++) {
@@ -52,11 +52,13 @@ async function mostrarProximoFeriado() {
   Terminal.escribir(resultado);
   Terminal.escribir("");
   Terminal.escribir("La fecha del próximo feriado es: " + proximoFeriado.fecha);
-  Terminal.escribir("Motivo del feriado: " + proximoFeriado.nombre);
   Terminal.escribir("");
-  Terminal.escribir("Cotización del dólar blue:");
-  Terminal.escribir("Compra: " + dolarBlue.compra);
-  Terminal.escribir("Venta: " + dolarBlue.venta);
+  Terminal.escribir("Recordamos que el próximo feriado es debido a: " + proximoFeriado.nombre);
+  Terminal.escribir("");
+  Terminal.escribir("Por último, ya que estamos, brindamos la cotización del dólar:");
+  Terminal.escribir("El precio del dólar blue para la COMPRA es de: " + dolarBlue.compra);
+  Terminal.escribir("El precio del dólar blue para la VENTA es de: " + dolarBlue.venta);
+  Terminal.escribir("");
   Terminal.escribir("");
 }
 
