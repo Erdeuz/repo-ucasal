@@ -24,6 +24,12 @@ asincrono funcion inicio() {
 
   inicio()
 }
+
+asincrono funcion mostrarProximoFeriado() {
+  const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
+  const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
+  const proximoFeriado = calcularProximoFeriado(feriados)
+  Terminal.limpiar()
 const frase = "COMO INTERNET ES SERVICIO :)";
 const colores = [
   tiza.rojo500,
@@ -35,14 +41,9 @@ const colores = [
   tiza.indigo500,
   tiza.lima500
 ];
-asincrono funcion mostrarProximoFeriado() {
-  const feriados = esperar obtenerJson('https://api.argentinadatos.com/v1/feriados/')
-  const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
-  const proximoFeriado = calcularProximoFeriado(feriados)
-  Terminal.limpiar()
   let resultado = ""
   for (let i = 0; i < frase.length; i++) {
-  const letra = frase[i]
+    const letra = frase[i]
   const color = colores[i % colores.length]
   resultado += color.negrita(letra)
   }
