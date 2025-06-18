@@ -20,7 +20,7 @@ asincrono funcion inicio() {
 
   Terminal.escribir("          Presiona ENTER para volver a ingresar")
 
-  esperar Terminal.leerEnter()
+  esperar Terminal.leerEnter("          ")
 
   Terminal.limpiar()
 
