@@ -36,10 +36,13 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("")
   Terminal.escribir("")
   Terminal.escribir("")
+  Terminal.escribir("")
+  Terminal.escribir("")
   Terminal.escribir("Por ultimo, como internet es servicio, la cotizacion del dolar es la siguiente: ");
   Terminal.escribir("El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
   Terminal.escribir("El precio del dolar blue, para la VENTA de:  " + dolarBlue.venta)
-  
+  Terminal.escribir("")
+  Terminal.escribir("")
   
 
 }
