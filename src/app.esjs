@@ -31,7 +31,9 @@ asincrono funcion mostrarProximoFeriado() {
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
+  Terminal.escribir("")
   Terminal.escribir(tiza.azul500.fondoIndigo50.negrita("GRACIAS POR SU VISITA!!!"));
+  Terminal.escribir("")
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
   Terminal.escribir("")
@@ -40,3 +42,7 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("Por ultimo, como internet es servicio, la cotizacion del dolar es la siguiente: ");
   Terminal.escribir("El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
   Terminal.escribir("El precio del dolar blue, para la VENTA de:  " + dolarBlue.venta)
+  Terminal.escribir("")
+}
+
+inicio();
