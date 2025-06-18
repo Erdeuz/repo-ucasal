@@ -3,7 +3,7 @@ importar { Terminal } desde "@es-js/terminal"
 importar { obtenerJson } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/obtener-json.js"
 importar { validarSecreto } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/validar-secreto.js"
 importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.vercel.app/2024/code/calcular-proximo-feriado.js"
-
+import { tiza } from "@es-js/tiza";
 asincrono funcion inicio() {
   Terminal.escribir("Hola! Ingresa la palabra secreta:")
 
@@ -31,7 +31,7 @@ asincrono funcion mostrarProximoFeriado() {
   const dolarBlue = esperar obtenerJson('https://dolarapi.com/v1/dolares/blue')
   const proximoFeriado = calcularProximoFeriado(feriados)
   Terminal.limpiar
-
+  Terminal.escribir(tiza.azul500.fondoIndigo50.negrita("GRACIAS POR SU VISITA!!!"));
   Terminal.escribir("La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
   Terminal.escribir("")
