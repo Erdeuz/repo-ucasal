@@ -66,6 +66,7 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
     UU:::::::::UU         CCC::::::::::::C A:::::A                 A:::::A S:::::::::::::::SS  A:::::A                 A:::::A L::::::::::::::::::::::L
       UUUUUUUUU              CCCCCCCCCCCCCAAAAAAA                   AAAAAAA SSSSSSSSSSSSSSS   AAAAAAA                   AAAAAAALLLLLLLLLLLLLLLLLLLLLLLL  
 `));
+}
   Terminal.escribir(tiza.verde("         ¿Acaso quiere ver un murcielago?? (S/N)"))
     const opc = await Terminal.leer()
     if (opc.trim().toLowerCase().startsWith('s')) {
@@ -75,6 +76,6 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
       window.location.href = "https://repo-ucasal.vercel.app/
     
   }
-}
+
 
 inicio();
