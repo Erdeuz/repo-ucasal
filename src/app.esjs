@@ -72,7 +72,7 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
       window.location.href = "https://graficos-igfz45fpo-erdeuzs-projects.vercel.app"//await mostrarBarmanAscii()
     }
   } else {
-    inicio()
+      window.location.href = "https://repo-ucasal.vercel.app/
     
   }
 }
