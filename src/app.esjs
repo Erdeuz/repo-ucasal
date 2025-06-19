@@ -48,14 +48,23 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("          El precio del dolar blue, para la VENTA de:      " + dolarBlue.venta)
   Terminal.escribir("         ╚═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╝   ")
   Terminal.escribir("")
-  Terminal.escribir(tiza.negrita.fondoRojo(`
-           _ _    _ ,            ___              ___            
-          - - /  - -    ,- _~.  -   -_,   -_-/   -   -_, _-_-    
-            ('||  ||   (' /|   (  ~/||   (_ /   (  ~/||   /,     
-           (( ||--||  ((  ||   (  / ||  (_ --_  (  / ||   ||     
-           (( ||--||  ((  ||    \/==||    --_ )  \/==||  ~||     
-           (( /   ||   ( / |    /_ _||   _/  ))  /_ _||   ||     
-             -___-\\,   -____- (  - \\, (_-_-   (  - \\, (  -__, 
+  Terminal.escribir(tiza.fondoRojo.negrita(`
+UUUUUUUU     UUUUUUUU        CCCCCCCCCCCCC               AAA                  SSSSSSSSSSSSSSS                AAA               LLLLLLLLLLL             
+U::::::U     U::::::U     CCC::::::::::::C              A:::A               SS:::::::::::::::S              A:::A              L:::::::::L             
+U::::::U     U::::::U   CC:::::::::::::::C             A:::::A             S:::::SSSSSS::::::S             A:::::A             L:::::::::L             
+UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S:::::S     SSSSSSS            A:::::::A            LL:::::::LL             
+ U:::::U     U:::::U  C:::::C       CCCCCC           A:::::::::A           S:::::S                       A:::::::::A             L:::::L                
+ U:::::D     D:::::U C:::::C                        A:::::A:::::A          S:::::S                      A:::::A:::::A            L:::::L                
+ U:::::D     D:::::U C:::::C                       A:::::A A:::::A          S::::SSSS                  A:::::A A:::::A           L:::::L                
+ U:::::D     D:::::U C:::::C                      A:::::A   A:::::A          SS::::::SSSSS            A:::::A   A:::::A          L:::::L                
+ U:::::D     D:::::U C:::::C                     A:::::A     A:::::A           SSS::::::::SS         A:::::A     A:::::A         L:::::L                
+ U:::::D     D:::::U C:::::C                    A:::::AAAAAAAAA:::::A             SSSSSS::::S       A:::::AAAAAAAAA:::::A        L:::::L                
+ U:::::D     D:::::U C:::::C                   A:::::::::::::::::::::A                 S:::::S     A:::::::::::::::::::::A       L:::::L                
+ U::::::U   U::::::U  C:::::C       CCCCCC    A:::::AAAAAAAAAAAAA:::::A                S:::::S    A:::::AAAAAAAAAAAAA:::::A      L:::::L         LLLLLL
+ U:::::::UUU:::::::U   C:::::CCCCCCCC::::C   A:::::A             A:::::A   SSSSSSS     S:::::S   A:::::A             A:::::A   LL:::::::LLLLLLLLL:::::L
+  UU:::::::::::::UU     CC:::::::::::::::C  A:::::A               A:::::A  S::::::SSSSSS:::::S  A:::::A               A:::::A  L::::::::::::::::::::::L
+    UU:::::::::UU         CCC::::::::::::C A:::::A                 A:::::A S:::::::::::::::SS  A:::::A                 A:::::A L::::::::::::::::::::::L
+      UUUUUUUUU              CCCCCCCCCCCCCAAAAAAA                   AAAAAAA SSSSSSSSSSSSSSS   AAAAAAA                   AAAAAAALLLLLLLLLLLLLLLLLLLLLLLL  
 `));
 }
 
