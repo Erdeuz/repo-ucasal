@@ -67,11 +67,11 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
       UUUUUUUUU              CCCCCCCCCCCCCAAAAAAA                   AAAAAAA SSSSSSSSSSSSSSS   AAAAAAA                   AAAAAAALLLLLLLLLLLLLLLLLLLLLLLL  
 `));
   Terminal.escribir(tiza.verde.negrita("         ¿Desea poner a prueba sus habilidades psicomotrices?? (S/N)"))
-    const opc = await Terminal.leer()
+    const opc = await Terminal.leer("          ")
     if (opc.trim().toLowerCase().startsWith('s')) {
       window.location.href = "https://graficos-igfz45fpo-erdeuzs-projects.vercel.app"//await mostrarBarmanAscii()
     } else {
-      Terminal.escribir(tiza.rojo.negrita("         OTRO DIA SERA - GRACIAS POR SU VISITA"))
+      Terminal.escribir(tiza.rojo.negrita("          OTRO DIA SERA - GRACIAS POR SU VISITA"))
     }
 
 }
