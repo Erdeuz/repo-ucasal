@@ -6,7 +6,7 @@ importar { calcularProximoFeriado } desde "https://desarrollo-aplicaciones.verce
 importar { tiza } desde "@es-js/tiza"
 asincrono funcion inicio() {
   Terminal.escribir("")
-  Terminal.escribir(tiza.fondoAzul.cursiva.negrita("Por favor, ingrese la Palabra secreta :) "))
+  Terminal.escribir(tiza.fondoAzul.cursiva.negrita("Recomendamos visualizar esta pagina con una resolucion de 1920*1080. Por favor ingrese la Palabra secreta :) "))
 
   var secreto = esperar Terminal.leer()
 
@@ -66,7 +66,7 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
     UU:::::::::UU         CCC::::::::::::C A:::::A                 A:::::A S:::::::::::::::SS  A:::::A                 A:::::A L::::::::::::::::::::::L
       UUUUUUUUU              CCCCCCCCCCCCCAAAAAAA                   AAAAAAA SSSSSSSSSSSSSSS   AAAAAAA                   AAAAAAALLLLLLLLLLLLLLLLLLLLLLLL  
 `));
-  Terminal.escribir(tiza.verde("         ¿Acaso quiere ver un murcielago?? (S/N)"))
+  Terminal.escribir(tiza.verde.negrita("         ¿Desea poner a prueba sus habilidades psicomotrices?? (S/N)"))
     const opc = await Terminal.leer()
     if (opc.trim().toLowerCase().startsWith('s')) {
       window.location.href = "https://graficos-igfz45fpo-erdeuzs-projects.vercel.app"//await mostrarBarmanAscii()
