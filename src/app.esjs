@@ -48,7 +48,7 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("          El precio del dolar blue, para la VENTA de:      " + dolarBlue.venta)
   Terminal.escribir("         ╚═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╝   ")
   Terminal.escribir("")
-  Terminal.escribir(`
+  Terminal.escribir(tiza.negrita.fondoRojo(`
            _ _    _ ,            ___              ___            
           - - /  - -    ,- _~.  -   -_,   -_-/   -   -_, _-_-    
             ('||  ||   (' /|   (  ~/||   (_ /   (  ~/||   /,     
@@ -56,7 +56,7 @@ asincrono funcion mostrarProximoFeriado() {
            (( ||--||  ((  ||    \/==||    --_ )  \/==||  ~||     
            (( /   ||   ( / |    /_ _||   _/  ))  /_ _||   ||     
              -___-\\,   -____- (  - \\, (_-_-   (  - \\, (  -__, 
-`);
+`));
 }
 
 inicio();
