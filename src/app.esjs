@@ -70,8 +70,9 @@ UU:::::U     U:::::UU  C:::::CCCCCCCC::::C            A:::::::A            S::::
     const opc = await Terminal.leer()
     if (opc.trim().toLowerCase().startsWith('s')) {
       window.location.href = "https://graficos-igfz45fpo-erdeuzs-projects.vercel.app"//await mostrarBarmanAscii()
+    } else {
+      Terminal.escribir(tiza.rojo.negrita("         OTRO DIA SERA - GRACIAS POR SU VISITA"))
     }
-  
 
 }
 inicio();
