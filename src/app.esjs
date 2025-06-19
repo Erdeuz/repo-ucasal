@@ -35,20 +35,20 @@ asincrono funcion mostrarProximoFeriado() {
   Terminal.escribir("")
   Terminal.escribir("                                        " + tiza.fondoRojo.cursiva.negrita("B I E N V E N I D O S   A   L A   P A G I N A ! ! ! !"))
   Terminal.escribir("")
-  Terminal.escribir("         ╔═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╗   ")
-  Terminal.escribir("          La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
+  Terminal.escribir("            ╔═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╗   ")
+  Terminal.escribir("             La fecha del proximo feriado es:  "+ proximoFeriado.fecha)
   Terminal.escribir("")
-  Terminal.escribir("          Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
+  Terminal.escribir("             Recordamos que el proximo feriado es debiado a:  "+ proximoFeriado.nombre)  
   Terminal.escribir("")
   Terminal.escribir("")
   Terminal.escribir("")
-  Terminal.escribir("          Por ultimo, como internet es servicio, la cotizacion del dolar es la siguiente: ");
+  Terminal.escribir("             Por ultimo, como internet es servicio, la cotizacion del dolar es la siguiente: ");
   Terminal.escribir("")
-  Terminal.escribir("          El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
-  Terminal.escribir("          El precio del dolar blue, para la VENTA de:      " + dolarBlue.venta)
-  Terminal.escribir("         ╚═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╝   ")
+  Terminal.escribir("             El precio del dolar blue, para la COMPRA es de:  " + dolarBlue.compra)
+  Terminal.escribir("             El precio del dolar blue, para la VENTA de:      " + dolarBlue.venta)
+  Terminal.escribir("            ╚═══════════════════════════════════ ≪ °❈° ≫ ═══════════════════════════════════╝   ")
   Terminal.escribir("")
-  Terminal.escribir(tiza.fondoRojo.negrita(`
+  Terminal.escribir(tiza.negrita(`
 UUUUUUUU     UUUUUUUU        CCCCCCCCCCCCC               AAA                  SSSSSSSSSSSSSSS                AAA               LLLLLLLLLLL             
 U::::::U     U::::::U     CCC::::::::::::C              A:::A               SS:::::::::::::::S              A:::A              L:::::::::L             
 U::::::U     U::::::U   CC:::::::::::::::C             A:::::A             S:::::SSSSSS::::::S             A:::::A             L:::::::::L             
